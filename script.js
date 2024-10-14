@@ -2,7 +2,7 @@ async function getValue() {
     var inputElement = document.getElementById('myIn');
     var inputValue = inputElement.value;
     document.getElementById("output").innerText = "Generating Notes... This May Take Few Moments";
-    const apiUrl = 'http://127.0.0.1:8000/yt?url=';
+    const apiUrl = 'https://notegen.pio.us.eu.org/yt?url=';
     const apiUrl2 = '&language=';
     const lang = document.getElementById('lang').value;
 
@@ -54,7 +54,7 @@ async function downloadPDF() {
     var inputElement = document.getElementById('myIn');
     var inputValue = inputElement.value;
     document.getElementById("output").innerText = "Generating PDF... This May Take a Few Moments";
-    const apiUrl = 'http://127.0.0.1:8000/download_pdf?url=';
+    const apiUrl = 'https://notegen.pio.us.eu.org/download_pdf?url=';
 
     try {
         const response = await fetch(apiUrl + encodeURIComponent(inputValue)); // Encode the URL parameter
